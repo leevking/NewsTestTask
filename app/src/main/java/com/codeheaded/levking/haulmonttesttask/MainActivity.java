@@ -3,6 +3,7 @@ package com.codeheaded.levking.haulmonttesttask;
 import android.arch.persistence.room.Database;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -31,15 +32,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void setRecyclerViewAdapter(){
+        DownloadNews task = new DownloadNews();
         NewsDatabase newsDatabase = DatabasePresenter.getInstance().getNewsDatabase();
         NewsDAO newsDAO = newsDatabase.newsDAO();
-        List<News> newsList = newsDAO.getAll();
+        task.execute();
+        recyclerView.setAdapter(new RecyclerViewNewsAdapter(this,newsDAO.getAll()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        progressBar.setVisibility(View.INVISIBLE);
 
-        //Rewrite when connection is finished
-        if(!newsList.isEmpty()) {
-            progressBar.setVisibility(View.INVISIBLE);
-            recyclerView.setAdapter(new RecyclerViewNewsAdapter(newsDAO.getAll()));
-        }
+
     }
 
 }

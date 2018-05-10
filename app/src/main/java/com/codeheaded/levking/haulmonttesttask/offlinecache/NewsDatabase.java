@@ -5,9 +5,9 @@ import android.arch.persistence.room.RoomDatabase;
 
 import com.codeheaded.levking.haulmonttesttask.News;
 
-import java.util.List;
 
-@Database(entities = {News.class} , version = 1)
+
+@Database(entities = {News.class} , version = 1, exportSchema = false)
 public abstract class NewsDatabase extends RoomDatabase {
 
     public abstract NewsDAO newsDAO();

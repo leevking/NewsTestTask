@@ -16,11 +16,6 @@ public class StartActivity extends AppCompatActivity {
     protected void onResume(){
         super.onResume();
         Intent intent = new Intent(StartActivity.this, MainActivity.class);
-        try {
-            wait(2000);
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
         startActivity(intent);
     }
 }

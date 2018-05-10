@@ -1,7 +1,6 @@
 package com.codeheaded.levking.haulmonttesttask;
 
 public class Constants {
-
     static final String API_KEY = "cec3543f3e2646208b26958b2feee4ad";
     static final String NEWS_RESOURCE = "rt";
     static final String KEY_AUTHOR = "author";
@@ -10,5 +9,5 @@ public class Constants {
     static final String KEY_URL = "url";
     static final String KEY_URLTOIMAGE = "urlToImage";
     static final String KEY_PUBLISHEDAT = "publishedAt";
-
+    static final String NEWS_REQUEST_TEMPLATE ="https://newsapi.org/v2/top-headlines?sources="+NEWS_RESOURCE+"&sortBy=top&apiKey="+API_KEY;
 }
