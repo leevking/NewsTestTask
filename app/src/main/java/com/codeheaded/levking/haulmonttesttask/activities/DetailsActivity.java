@@ -1,4 +1,4 @@
-package com.codeheaded.levking.haulmonttesttask;
+package com.codeheaded.levking.haulmonttesttask.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,9 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
+
+import com.codeheaded.levking.haulmonttesttask.onlinework.Connection;
+import com.codeheaded.levking.haulmonttesttask.R;
 
 public class DetailsActivity extends AppCompatActivity {
 

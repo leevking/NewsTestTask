@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import com.codeheaded.levking.haulmonttesttask.DownloadNews;
+import com.codeheaded.levking.haulmonttesttask.onlinework.DownloadNews;
 
 public class AlarmReceiver extends BroadcastReceiver {
     @Override

@@ -1,4 +1,4 @@
-package com.codeheaded.levking.haulmonttesttask;
+package com.codeheaded.levking.haulmonttesttask.activities;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.SeekBar;
 import android.widget.Switch;
+
+import com.codeheaded.levking.haulmonttesttask.Constants;
+import com.codeheaded.levking.haulmonttesttask.R;
 
 public class SettingsActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.codeheaded.levking.haulmonttesttask;
+package com.codeheaded.levking.haulmonttesttask.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,9 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.codeheaded.levking.haulmonttesttask.Constants;
+import com.codeheaded.levking.haulmonttesttask.R;
 
 public class StartActivity extends AppCompatActivity {
 

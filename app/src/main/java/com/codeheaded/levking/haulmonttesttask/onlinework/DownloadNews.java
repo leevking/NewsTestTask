@@ -1,10 +1,13 @@
-package com.codeheaded.levking.haulmonttesttask;
+package com.codeheaded.levking.haulmonttesttask.onlinework;
 
 import android.os.AsyncTask;
 
+import com.codeheaded.levking.haulmonttesttask.Constants;
+import com.codeheaded.levking.haulmonttesttask.News;
 import com.codeheaded.levking.haulmonttesttask.offlinecache.DatabasePresenter;
 import com.codeheaded.levking.haulmonttesttask.offlinecache.NewsDAO;
 import com.codeheaded.levking.haulmonttesttask.offlinecache.NewsDatabase;
+import com.codeheaded.levking.haulmonttesttask.onlinework.Connection;
 
 import org.json.JSONArray;
 import org.json.JSONException;

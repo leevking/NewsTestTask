@@ -1,8 +1,7 @@
-package com.codeheaded.levking.haulmonttesttask;
+package com.codeheaded.levking.haulmonttesttask.activities;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
-import android.arch.persistence.room.Database;
 import android.content.Context;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -14,12 +13,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
 
+import com.codeheaded.levking.haulmonttesttask.onlinework.Connection;
+import com.codeheaded.levking.haulmonttesttask.Constants;
+import com.codeheaded.levking.haulmonttesttask.onlinework.DownloadNews;
+import com.codeheaded.levking.haulmonttesttask.R;
+import com.codeheaded.levking.haulmonttesttask.RecyclerViewNewsAdapter;
 import com.codeheaded.levking.haulmonttesttask.offlinecache.DatabasePresenter;
 import com.codeheaded.levking.haulmonttesttask.offlinecache.NewsDAO;
 import com.codeheaded.levking.haulmonttesttask.offlinecache.NewsDatabase;
 import com.codeheaded.levking.haulmonttesttask.sync.AlarmReceiver;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
