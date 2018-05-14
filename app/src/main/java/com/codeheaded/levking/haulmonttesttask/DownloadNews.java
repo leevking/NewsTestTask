@@ -47,6 +47,8 @@ public class DownloadNews extends AsyncTask<String, Void, String> {
                             jsonObject.optString(Constants.KEY_URL).toString()
                     ));
                 }
+
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }

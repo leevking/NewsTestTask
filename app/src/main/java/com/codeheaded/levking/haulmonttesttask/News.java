@@ -5,7 +5,7 @@ import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
 @Entity
-public class News {
+public class News implements Comparable<News> {
 
     @PrimaryKey
     @NonNull
@@ -14,6 +14,7 @@ public class News {
     private String date;
     private String imageURL;
     private String URL;
+
 
     public News(String title, String details, String date, String imageURL, String URL){
         this.title = title;
@@ -69,5 +70,12 @@ public class News {
 
     public void setURL(String URL){
         this.URL = URL;
+    }
+
+    @Override
+    public int compareTo(@NonNull News o) {
+
+        if(Constants.getSortOrder())return -1*this.date.compareTo(o.date);
+        else return this.date.compareTo(o.date);
     }
 }

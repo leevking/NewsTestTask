@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
 
 public class RecyclerViewNewsAdapter extends RecyclerView.Adapter<RecyclerViewNewsAdapter.ViewHolder> {
@@ -26,6 +27,7 @@ public class RecyclerViewNewsAdapter extends RecyclerView.Adapter<RecyclerViewNe
     private  Activity activity;
     public RecyclerViewNewsAdapter(Activity activity, List<News> list) {
         this.activity = activity; listNews = list;
+        Collections.sort(listNews);
     }
 
     @NonNull
@@ -81,7 +83,7 @@ public class RecyclerViewNewsAdapter extends RecyclerView.Adapter<RecyclerViewNe
             newsDetails.setText(newsUnit.getDetails());
             newsDate.setText(newsUnit.getDate());
             if(newsUnit.getImageURL().length()>5){
-                Picasso.with(activity).load(newsUnit.getImageURL()).resize(300,200).into(newsImage);
+                Picasso.with(activity).load(newsUnit.getImageURL()).resize(320,250).into(newsImage);
             } else newsImage.setImageResource(R.drawable.ic_launcher_background);
         }
 
